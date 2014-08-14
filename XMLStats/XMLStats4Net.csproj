@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{155C5B8A-4AD9-4334-9833-B92C358A6F7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XMLStats</RootNamespace>
+    <AssemblyName>XMLStats</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Entities\AwayBatter.cs" />
+    <Compile Include="Entities\AwayBatterTotals.cs" />
+    <Compile Include="Entities\AwayPitcher.cs" />
+    <Compile Include="Entities\AwayStat.cs" />
+    <Compile Include="Entities\AwayTeam.cs" />
+    <Compile Include="Entities\AwayTotals.cs" />
+    <Compile Include="Entities\BasketballTotals.cs" />
+    <Compile Include="Entities\Batter.cs" />
+    <Compile Include="Entities\BatterTotals.cs" />
+    <Compile Include="Entities\Constants.cs" />
+    <Compile Include="Entities\Event.cs" />
+    <Compile Include="Entities\EventInformation.cs" />
+    <Compile Include="Entities\EventList.cs" />
+    <Compile Include="Entities\HomeBatterTotals.cs" />
+    <Compile Include="Entities\HomeHitter.cs" />
+    <Compile Include="Entities\HomePitcher.cs" />
+    <Compile Include="Entities\HomeStat.cs" />
+    <Compile Include="Entities\HomeTeam.cs" />
+    <Compile Include="Entities\HomeTotals.cs" />
+    <Compile Include="Entities\MLBBoxScore.cs" />
+    <Compile Include="Entities\NBABoxScore.cs" />
+    <Compile Include="Entities\Official.cs" />
+    <Compile Include="Entities\Opponent.cs" />
+    <Compile Include="Entities\Pitcher.cs" />
+    <Compile Include="Entities\Site.cs" />
+    <Compile Include="Entities\Stat.cs" />
+    <Compile Include="Entities\Team.cs" />
+    <Compile Include="Entities\TeamScheduleResult.cs" />
+    <Compile Include="EventsRequest.cs" />
+    <Compile Include="GZipWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\RequestHelpers.cs" />
+    <Compile Include="MLBBoxScoreRequest.cs" />
+    <Compile Include="NBABoxScoreRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeamScheduleResultsRequest.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
